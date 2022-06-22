@@ -1,0 +1,56 @@
+{% extends "layouts/layout.html" %}
+{% set active_page = "signup" %}
+{% block content %}
+
+<div class="text-center vertical-center-me">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <div>
+                {% if form.username.errors %}
+                    {% for error in form.username.errors %}
+                        <label class="text-danger mt-2">{{ error }}</label> <br>
+                    {% endfor %}
+                    {{ form.username(class="border p-2 border-danger") }}
+                {% else %}
+                    {{ form.username(class="border p-2 border-dark mt-3") }}
+                {% endif %}
+            </div>
+            <div>
+                {% if form.email.errors %}
+                    {% for error in form.email.errors %}
+                        <label class="text-danger mt-2">{{ error }}</label> <br>
+                    {% endfor %}
+                    {{ form.email(class="border p-2 border-danger mt-0") }}
+                {% else %}
+                    {{ form.email(class="border p-2 border-dark mt-3") }}
+                {% endif %}
+            </div>
+            <div>
+                {% if form.password.errors %}
+                    {% for error in form.password.errors %}
+                        <label class="text-danger mt-2">{{ error }}</label> <br>
+                    {% endfor %}
+                    {{ form.password(class="border p-2 border-danger mt-0") }}
+                {% else %}
+                    {{ form.password(class="border p-2 border-dark mt-3") }}
+                {% endif %}
+            </div>
+            <div>
+                {% if form.confirm_password.errors %}
+                    {% for error in form.confirm_password.errors %}
+                        <label class="text-danger mt-2">{{ error }}</label> <br>
+                    {% endfor %}
+                    {{ form.confirm_password(class="border p-2 border-danger mt-0") }}
+                {% else %}
+                    {{ form.confirm_password(class="border p-2 border-dark mt-3") }}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div>
+            {{ form.submit(class="btn-sm mt-3") }}
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

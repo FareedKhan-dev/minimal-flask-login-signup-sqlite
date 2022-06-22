@@ -1,0 +1,217 @@
+{% extends "layouts/layout.html" %}
+{% set active_page = "dashboard" %}
+{% block content %}
+<div id="show-this"></div>
+{% if headings is not defined %}
+    <p>Upload your data to start working with our tools</p>
+{% endif %}
+<!-- <h1>{{ current_user.username }}</h1> -->
+
+<form action="" method="POST" enctype="multipart/form-data" class="mb-4">
+    {{ form.hidden_tag() }}
+    <fieldset>
+        <div>
+            {% if form.data.errors %}
+                {% for error in form.data.errors %}
+                    <label class="text-danger mt-2">{{ error }}</label> <br>
+                {% endfor %}
+                {{ form.data(class="btn-sm border") }}
+                {{ form.submit(class="btn-sm mt-3") }}
+            {% else %}
+                {{ form.data(class="btn-sm border") }}
+                {{ form.submit(class="btn-sm mt-3") }}
+            {% endif %}
+        </div>
+    </fieldset>
+</form>
+
+
+<!-- dataset upload file -->
+<div style=" overflow-x: auto;">
+    <table style="font-size: small;" class="table table-bordered table-hover table-condensed">
+
+        <tr>
+          {% for header in headings %}
+          <th>{{ header }}</th>
+          {% endfor %}
+        </tr>
+    
+        {% for row in data %}
+        <tr>
+          {% for cell in row %}
+          <td>{{ cell }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </table>
+</div>
+
+<!-- section working with dataset -->
+<div class="mt-4 section-working-with-data ">
+    <h2>Clean My dataset</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum vitae aut hic sit iste quo assumenda. Itaque officia obcaecati non sequi! Qui, voluptatum adipisci? Eaque, officiis! Dolorum enim numquam voluptate.</p>
+    <form action="" method="post">
+        <select name="" id="">
+            {% for header in headings %}
+            <option value="{{ header }}">{{ header }}</option>
+            {% endfor %}
+        </select>
+    </form>
+    <div class="row">
+        <div class="col-auto">
+            <div class="tree"  style="height: 400px; overflow: auto;">
+                <form id="my_form" method="POST" action="">
+                    <ul>
+                        <li><span><a style="color:#000; text-decoration:none;">Web</a></span>
+                            <div id="Web">
+                                <ul>
+                                    <!-- first element -->
+                                    <li><span><a style="color:#000; text-decoration:none;">work 1</a></span>
+                                        <ul>
+                                            <div>
+                                                <li><span>
+                                                        <a href="#!">
+                                                            <input style="display: none;" onchange='this.form.submit();' type="radio" id="html" 
+                                                            name="input_value" value="show_data_shape">
+                                                            <label data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>" for="html">Shape of data</label>
+
+                                                        </a>
+                                                    </span></li>
+                                            </div>
+                                        </ul>
+                                    </li>
+    
+                                    <!-- second element -->
+                                    <li><span><a style="color:#000; text-decoration:none;">work 2</a></span>
+                                        <ul>
+                                            <div>
+                                                <li><span>
+                                                        <a href="{{url_for('dashboards.dashboard')}}">
+                                                            here goes the work
+                                                        </a>
+                                                    </span></li>
+                                            </div>
+                                        </ul>
+                                    </li>
+    
+                                    <!-- third element -->
+                                    <li><span><a style="color:#000; text-decoration:none;">work 3</a></span>
+                                        <ul>
+                                            <div>
+                                                <li><span><a style="color:#000; text-decoration:none;"
+                                                            data-toggle="collapse" href="#folder1"
+                                                            aria-expanded="false" aria-controls="folder1"><i
+                                                                class="collapsed"></i>Folder 1</a></span>
+                                                    <ul>
+                                                        <div id="folder1" class="collapse">
+    
+    
+                                                            <li><span><a style="color:#000; text-decoration:none;"
+                                                                        data-toggle="collapse" href="#foldersub"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="foldersub"><i
+                                                                            class="collapsed"></i>work 3 folder 1
+                                                                        subfolder</a></span>
+                                                                <ul>
+                                                                    <div id="foldersub" class="collapse">
+                                                                        <li><span>
+                                                                                <a href="#!">
+                                                                                    here goes the work
+                                                                                </a>
+                                                                            </span></li>
+                                                                        <li><span>
+                                                                                <a href="#!">
+                                                                                    here goes the work
+                                                                                </a>
+                                                                            </span></li>
+                                                                        <li><span>
+                                                                                <a href="#!">
+                                                                                    here goes the work
+                                                                                </a>
+                                                                            </span></li>
+                                                                    </div>
+                                                                </ul>
+                                                            </li>
+                                                        </div>
+                                                    </ul>
+                                                </li>
+    
+                                                <li><span><a style="color:#000; text-decoration:none;"
+                                                            data-toggle="collapse" href="#folder2"
+                                                            aria-expanded="false" aria-controls="folder2"><i
+                                                                class="collapsed"></i>Folder 2</a></span>
+                                                    <ul>
+                                                        <div id="folder2" class="collapse">
+                                                            <li><span>
+                                                                    <a href="#!">
+                                                                        here goes the work
+                                                                    </a>
+                                                                </span></li>
+                                                            <li><span>
+                                                                    <a href="#!">
+                                                                        here goes the work
+                                                                    </a>
+                                                                </span></li>
+                                                            <li><span>
+                                                                    <a href="#!">
+                                                                        here goes the work
+                                                                    </a>
+                                                                </span></li>
+                                                        </div>
+                                                    </ul>
+                                                </li>
+    
+    
+                                                <li><span><a style="color:#000; text-decoration:none;"
+                                                            data-toggle="collapse" href="#folder3"
+                                                            aria-expanded="false" aria-controls="folder3"><i
+                                                                class="collapsed"><i class="fas fa-folder"></i></i>
+                                                            <i class="expanded"><i
+                                                                    class="far fa-folder-open"></i></i> Folder
+                                                            3</a></span>
+                                                    <ul>
+                                                        <div id="folder3" class="collapse">
+                                                            <li><span><i class="far fa-file"></i><a href="#!">
+                                                                        Link</a></span>
+                                                            </li>
+                                                        </div>
+                                                    </ul>
+                                                </li>
+    
+                                                <li><span><i class="far fa-file"></i><a href="#!"> Link</a></span>
+                                                </li>
+    
+                                            </div>
+                                        </ul>
+                                    </li>
+    
+    
+                                    <li><span><a href="#!"> Link 2</a></span></li>
+    
+    
+    
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="col" style="height: 400px;  overflow: auto; width: 500px; padding: 0px; margin: 0px;">
+            <div class="vertical-center-me w-100 text-center">
+                {% if output %}
+                <p>Number of rows are: {{output[0]}}</p>
+                <p>Number of columns are:  {{output[1]}}</p>
+                {% else %}
+                <p>Output is going to show here once you select any of the box from left given tree.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, asperiores quibusdam. Optio nam, ex tempore consequuntur illo perspiciatis minima repudiandae, autem earum unde deleniti doloribus quibusdam, nisi facere consequatur molestias.</p>
+
+{% endblock content %}

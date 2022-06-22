@@ -1,0 +1,51 @@
+{% extends "layouts/dashboard_layout.html" %}
+{% set active_page = "dashboard" %}
+{% block content %}
+
+{% if headings is not defined %}
+    <p>Upload your data to start working with our tools</p>
+{% endif %}
+<!-- <h1>{{ current_user.username }}</h1> -->
+
+<form action="" method="POST" enctype="multipart/form-data" class="mb-4">
+    {{ form.hidden_tag() }}
+    <fieldset>
+        <div>
+            {% if form.data.errors %}
+                {% for error in form.data.errors %}
+                    <label class="text-danger mt-2">{{ error }}</label> <br>
+                {% endfor %}
+                {{ form.data(class="btn-sm border") }}
+                {{ form.submit(class="btn-sm mt-3") }}
+            {% else %}
+                {{ form.data(class="btn-sm border") }}
+                {{ form.submit(class="btn-sm mt-3") }}
+            {% endif %}
+        </div>
+    </fieldset>
+</form>
+
+
+
+<div style=" overflow-x: auto;">
+    <table style="font-size: small;" class="table table-bordered table-hover table-condensed">
+
+        <tr>
+          {% for header in headings %}
+          <th>{{ header }}</th>
+          {% endfor %}
+        </tr>
+    
+        {% for row in data %}
+        <tr>
+          {% for cell in row %}
+          <td>{{ cell }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </table>
+</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, id, aperiam labore quasi voluptates porro, sed quibusdam cupiditate vel impedit corporis repudiandae quam totam illum dignissimos. Expedita neque iusto quae.</p>
+
+{% endblock content %}

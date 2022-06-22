@@ -1,0 +1,282 @@
+{% extends "layouts/dashboard_layout.html" %}
+{% set active_page = "dashboard" %}
+{% block content %}
+
+<p>Upload your data to start working with our tools</p>
+
+<form action="/action_page.php" class="mb-4">
+    <input class="btn-sm border" type="file" id="myFile" name="filename">
+    <input class="btn-sm" type="submit">
+</form>
+
+<div style=" overflow-x: auto; height:400px;">
+    <table style="font-size: small;" class="table table-bordered table-hover table-condensed">
+        <thead>
+            <tr>
+                <th title="Field #1">App Name</th>
+                <th title="Field #2">App Id</th>
+                <th title="Field #3">Category</th>
+                <th title="Field #4">Rating</th>
+                <th title="Field #5">Rating Count</th>
+                <th title="Field #6">Installs</th>
+                <th title="Field #7">Minimum Installs</th>
+                <th title="Field #8">Maximum Installs</th>
+                <th title="Field #9">Free</th>
+                <th title="Field #10">Price</th>
+                <th title="Field #11">Currency</th>
+                <th title="Field #12">Size</th>
+                <th title="Field #13">Minimum Android</th>
+                <th title="Field #14">Developer Id</th>
+                <th title="Field #15">Developer Website</th>
+                <th title="Field #16">Developer Email</th>
+                <th title="Field #17">Released</th>
+                <th title="Field #18">Last Updated</th>
+                <th title="Field #19">Content Rating</th>
+                <th title="Field #20">Privacy Policy</th>
+                <th title="Field #21">Ad Supported</th>
+                <th title="Field #22">In App Purchases</th>
+                <th title="Field #23">Editors Choice</th>
+                <th title="Field #24">Scraped Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gakondo</td>
+                <td>com.ishakwe.gakondo</td>
+                <td>Adventure</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td>10+</td>
+                <td align="right">10</td>
+                <td align="right">15</td>
+                <td>TRUE</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>10M</td>
+                <td>7.1 and up</td>
+                <td>Jean Confident IrÃ©nÃ©e NIYIZIBYOSE</td>
+                <td>https://beniyizibyose.tk/#/</td>
+                <td>jean21101999@gmail.com</td>
+                <td>Feb 26, 2020</td>
+                <td>Feb 26, 2020</td>
+                <td>Everyone</td>
+                <td>https://beniyizibyose.tk/projects/</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>15/06/2021 20:19</td>
+            </tr>
+            <tr>
+                <td>Ampere Battery Info</td>
+                <td>com.webserveis.batteryinfo</td>
+                <td>Tools</td>
+                <td align="right">4.4</td>
+                <td align="right">64</td>
+                <td>5,000+</td>
+                <td align="right">5000</td>
+                <td align="right">7662</td>
+                <td>TRUE</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>2.9M</td>
+                <td>5.0 and up</td>
+                <td>Webserveis</td>
+                <td>https://webserveis.netlify.app/</td>
+                <td>webserveis@gmail.com</td>
+                <td>May 21, 2020</td>
+                <td>May 06, 2021</td>
+                <td>Everyone</td>
+                <td>https://dev4phones.wordpress.com/licencia-de-uso/</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>15/06/2021 20:19</td>
+            </tr>
+            <tr>
+                <td>Vibook</td>
+                <td>com.doantiepvien.crm</td>
+                <td>Productivity</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td>50+</td>
+                <td align="right">50</td>
+                <td align="right">58</td>
+                <td>TRUE</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>3.7M</td>
+                <td>4.0.3 and up</td>
+                <td>Cabin Crew</td>
+                <td> </td>
+                <td>vnacrewit@gmail.com</td>
+                <td>Aug 9, 2019</td>
+                <td>Aug 19, 2019</td>
+                <td>Everyone</td>
+                <td>https://www.vietnamairlines.com/vn/en/terms-and-conditions/privacy-policy</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>15/06/2021 20:19</td>
+            </tr>
+            <tr>
+                <td>Smart City Trichy Public Service Vehicles 17UCS548</td>
+                <td>cst.stJoseph.ug17ucs548</td>
+                <td>Communication</td>
+                <td align="right">5</td>
+                <td align="right">5</td>
+                <td>10+</td>
+                <td align="right">10</td>
+                <td align="right">19</td>
+                <td>TRUE</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>1.8M</td>
+                <td>4.0.3 and up</td>
+                <td>Climate Smart Tech2</td>
+                <td>http://www.climatesmarttech.com/</td>
+                <td>climatesmarttech2@gmail.com</td>
+                <td>Sep 10, 2018</td>
+                <td>Oct 13, 2018</td>
+                <td>Everyone</td>
+                <td> </td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>15/06/2021 20:19</td>
+            </tr>
+            <tr>
+                <td>GROW.me</td>
+                <td>com.horodyski.grower</td>
+                <td>Tools</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td>100+</td>
+                <td align="right">100</td>
+                <td align="right">478</td>
+                <td>TRUE</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>6.2M</td>
+                <td>4.1 and up</td>
+                <td>Rafal Milek-Horodyski</td>
+                <td>http://www.horodyski.com.pl</td>
+                <td>rmilekhorodyski@gmail.com</td>
+                <td>Feb 21, 2020</td>
+                <td>Nov 12, 2018</td>
+                <td>Everyone</td>
+                <td>http://www.horodyski.com.pl</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>15/06/2021 20:19</td>
+            </tr>
+            <tr>
+                <td>IMOCCI</td>
+                <td>com.imocci</td>
+                <td>Social</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td>50+</td>
+                <td align="right">50</td>
+                <td align="right">89</td>
+                <td>TRUE</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>46M</td>
+                <td>6.0 and up</td>
+                <td>Imocci GmbH</td>
+                <td>http://www.imocci.com</td>
+                <td>info@imocci.com</td>
+                <td>Dec 24, 2018</td>
+                <td>Dec 20, 2019</td>
+                <td>Teen</td>
+                <td>https://www.imocci.com/wp-content/uploads/2018/08/DatenschutzerklÃ¤rung_IMOCCI_22072018.pdf
+                </td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td>15/06/2021 20:19</td>
+            </tr>
+            <tr>
+                <td>unlimited 4G data prank free app</td>
+                <td>getfreedata.superfatiza.unlimitedjiodataprank</td>
+                <td>Libraries &amp; Demo</td>
+                <td align="right">4.5</td>
+                <td align="right">12</td>
+                <td>1,000+</td>
+                <td align="right">1000</td>
+                <td align="right">2567</td>
+                <td>TRUE</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>2.5M</td>
+                <td>4.1 and up</td>
+                <td>android developer779</td>
+                <td> </td>
+                <td>aitomgharfatimezzahra@gmail.com</td>
+                <td>Sep 23, 2019</td>
+                <td>Sep 27, 2019</td>
+                <td>Everyone</td>
+                <td>https://sites.google.com/view/unlimited4gdataprank</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>15/06/2021 20:19</td>
+            </tr>
+            <tr>
+                <td>The Everyday Calendar</td>
+                <td>com.mozaix.simoneboard</td>
+                <td>Lifestyle</td>
+                <td align="right">2</td>
+                <td align="right">39</td>
+                <td>500+</td>
+                <td align="right">500</td>
+                <td align="right">702</td>
+                <td>TRUE</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>16M</td>
+                <td>5.0 and up</td>
+                <td>Mozaix LLC</td>
+                <td> </td>
+                <td>elementuser03@gmail.com</td>
+                <td>Jun 21, 2019</td>
+                <td>Jun 21, 2019</td>
+                <td>Everyone</td>
+                <td>https://www.freeprivacypolicy.com/privacy/view/978b22a2fd432de423de81e4ac91d571</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>15/06/2021 20:19</td>
+            </tr>
+            <tr>
+                <td>WhatsOpen</td>
+                <td>com.whatsopen.app</td>
+                <td>Communication</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td>10+</td>
+                <td align="right">10</td>
+                <td align="right">18</td>
+                <td>TRUE</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>1.3M</td>
+                <td>4.4 and up</td>
+                <td>Yilver Molina Hurtatiz</td>
+                <td>http://yilvermolinah.com</td>
+                <td>yilver.mh1996@gmail.com</td>
+                <td> </td>
+                <td>Dec 07, 2018</td>
+                <td>Teen</td>
+                <td>http://elcafedelamanana.yilvermolinah.com/policy.html</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>15/06/2021 20:19</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}
